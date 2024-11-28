@@ -8,7 +8,7 @@ app.secret_key = 'your_secret_key'
 def get_db_connection():
     conn = pyodbc.connect(
         'DRIVER={ODBC Driver 17 for SQL Server};'
-        'SERVER=10.255.255.254,1433;'  # Replace with your Windows host IP
+        'SERVER=;'  # Replace with your Windows host IP
         'DATABASE=PunchCardSystem;'
         'Trusted_Connection=yes;'     # Uses Windows Authentication
     )
