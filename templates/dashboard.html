@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Hello {{ first_name }} {{ last_name }}, our fellow {{ role }}!</h2>
+        <h4>Your Weekly Logs:</h4>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Week ID</th>
+                    <th>Week Ending Day</th>
+                    <th>Total Hours</th>
+                    <th>Overtime</th>
+                    <th>Weighted Hours</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for log in week_logs %}
+                <tr>
+                    <td>{{ log[0] }}</td>
+                    <td>{{ log[1] }}</td>
+                    <td>{{ log[2] }}</td>
+                    <td>{{ log[3] }}</td>
+                    <td>{{ log[4] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
